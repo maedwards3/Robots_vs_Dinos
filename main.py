@@ -1,16 +1,25 @@
-# This is a sample Python script.
+from robots import Robot
+from dinosaurs import Dinosaur
+from fleet import Fleet
+from herd import Herd
+from battlefield import Battlefield
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+r1 = Robot('WALL-E')
+r2 = Robot('T-800')
+r3 = Robot('Roomba')
 
+d1 = Dinosaur('Trogdor', 55)
+d2 = Dinosaur('Allosaurus', 42)
+d3 = Dinosaur('Spinosaurus', 55)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+Fleet(3)
+Fleet.create_fleet(r1)
+Fleet.create_fleet(r2)
+Fleet.create_fleet(r3)
+print(Fleet.robot_fleet)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+Herd(3)
+Herd.create_herd(d1)
+Herd.create_herd(d2)
+Herd.create_herd(d3)
+print(Herd.dinosaur_herd)
